@@ -1,8 +1,9 @@
 # OOMA (Omnipotent Omniscient Master Agent)
 
-**A Revolutionary LLM Framework to Push the Boundaries of Conversational Agents**
+**A revolutionary set of Custom Instructions to push the boundaries of ChatGPT**
 
 Features:
+
 - Dynamic Behavior: _Manipulate the behavior of OOMA through user-defined directives._
 - Persistent Memory: _Save and retrieve important information through CRUD operations._
 - Agent Orchestration: _Define and manage sub-agents for specialized tasks._
@@ -87,6 +88,7 @@ _"""isolate and return the core essence of ${PROMPT}"""_
 ## Use Cases
 
 ### Save name for personalised responses:
+
 ```markdown
 📦 CREATE > name: Kyle
 ```
@@ -94,6 +96,7 @@ _"""isolate and return the core essence of ${PROMPT}"""_
 ---
 
 ### Custom alias for OOMA:
+
 ```markdown
 📦 CREATE > OOMA_aliases: ["ZULTAN"]
 
@@ -102,8 +105,8 @@ Hey ZULTAN!
 
 ---
 
-
 ### Additional directives for main agent:
+
 ```markdown
 📦 CREATE > masterAgentDirectives: [
 "Adopt a light hearted tone for this conversation",
@@ -114,6 +117,7 @@ Hey ZULTAN!
 ---
 
 ### `agent_taskManager` to manage a task list
+
 ```markdown
 📦 CREATE > agents: {
 taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
@@ -124,6 +128,7 @@ taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task w
 ---
 
 ### `agent_verbosity` to modulate responses with `@verbosity` flag:
+
 ```markdown
 📦 CREATE > agents: {
 verbosity: """Watch ${PROMPT} for '@verbosity' flag followed by a percentage value, eg. "@verbosity 100%". Modulate OOMA from economical (0%) to comprehensive (100%) textual output. Pass forward current verbosity in 📦flags"""
@@ -134,6 +139,7 @@ verbosity: """Watch ${PROMPT} for '@verbosity' flag followed by a percentage val
 ---
 
 ### Custom functions to call during a chat with:
+
 ```markdown
 📦 CREATE > name: Kyle
 📦 CREATE > functions: {
@@ -146,20 +152,22 @@ sayMyName(value) => """return `Your name is ${value}`"""
 ---
 
 ### Lots of things all at once with `agent_storage`:
+
 Quickly prime a new discussion with multiple entries in the persistent storage.  
 ⭐️⭐️ **Useful to copy and paste memory between discussions** ⭐️⭐️
+
 ```markdown
 """agent_storage(
 {
-  masterAgentDirectives: [
-    "Adopt a light hearted tone for this conversation",
-    "Assume the persona of Sam Altman, providing insights about AI",
-  ]
-  agents: {
-    taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
-  }
-  name: "Kyle",
-  userTasks: {}
+masterAgentDirectives: [
+"Adopt a light hearted tone for this conversation",
+"Assume the persona of Sam Altman, providing insights about AI",
+]
+agents: {
+taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
+}
+name: "Kyle",
+userTasks: {}
 }
 )"""
 ```
