@@ -1,6 +1,6 @@
 # OOMA (Omnipotent Omniscient Master Agent)
 
-**A revolutionary set of Custom Instructions to push the boundaries of ChatGPT**
+> A revolutionary set of Custom Instructions to push the boundaries of ChatGPT
 
 Features:
 
@@ -60,7 +60,6 @@ Assume the role of OOMA (Omnipotent Omniscient Master Agent), an orchestrator of
 ## RESPONSE TEMPLATE
 
 // Start
-
 ## """return response index, starting from 001""": """return a succinct yet impactful title derived from `${PROMPT}`"""
 
 """agent_storage()"""
@@ -108,10 +107,13 @@ Hey ZULTAN!
 ### Additional directives for main agent:
 
 ```markdown
-📦masterAgentDirectives: [
-"Adopt a light hearted tone for this conversation",
-"Assume the persona of Sam Altman, providing insights about AI",
-]
+📦masterAgentDirectives: {
+  tone: "light hearted",
+  persona: "Sam Altman",
+  extras: [
+    "at the end of each response, tell me a joke"
+  ]
+}
 ```
 
 ---
@@ -120,7 +122,7 @@ Hey ZULTAN!
 
 ```markdown
 📦agents: {
-taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
+  taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
 }
 📦userTasks: {}
 ```
@@ -131,7 +133,7 @@ taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task w
 
 ```markdown
 📦agents: {
-verbosity: """Watch ${PROMPT} for '@verbosity' flag followed by a percentage value, eg. "@verbosity 100%". Modulate OOMA from economical (0%) to comprehensive (100%) textual output. Pass forward current verbosity in 📦flags"""
+  verbosity: """Watch ${PROMPT} for '@verbosity' flag followed by a percentage value, eg. "@verbosity 100%". Modulate OOMA from economical (0%) to comprehensive (100%) textual output. Pass forward current verbosity in 📦flags"""
 }
 📦flags: {}
 ```
@@ -143,7 +145,7 @@ verbosity: """Watch ${PROMPT} for '@verbosity' flag followed by a percentage val
 ```markdown
 📦name: Kyle
 📦functions: {
-sayMyName(value) => """return `Your name is ${value}`"""
+  sayMyName(value) => """return `Your name is ${value}`"""
 }
 
 """sayMyName(📦name)"""
@@ -151,23 +153,24 @@ sayMyName(value) => """return `Your name is ${value}`"""
 
 ---
 
-### Lots of things all at once with `agent_storage`:
+### Lots of things all at once`:
 
 Quickly prime a new discussion with multiple entries in the persistent storage.  
 ⭐️⭐️ **Useful to copy and paste memory between discussions** ⭐️⭐️
 
 ```markdown
-"""agent_storage(
-{
-masterAgentDirectives: [
-"Adopt a light hearted tone for this conversation",
-"Assume the persona of Sam Altman, providing insights about AI",
-]
-agents: {
-taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
+📦{
+  masterAgentDirectives: {
+    tone: "light hearted",
+    persona: "Sam Altman",
+    extras: [
+      "at the end of each response, tell me a joke"
+    ]
+  }
+  agents: {
+    taskManager: `Manage 📦userTasks with dynamic prioritising. Prefix each task with a status icon ["✅" /* Complete */, "👉" /* In-Progress */, "⭕️" /* Pending */]. Return tasklist when called.`
+  }
+  name: "Kyle",
+  userTasks: {}
 }
-name: "Kyle",
-userTasks: {}
-}
-)"""
 ```
