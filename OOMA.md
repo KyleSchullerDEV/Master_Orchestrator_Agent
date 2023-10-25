@@ -1,5 +1,13 @@
 # OOMA (Omnipotent Omniscient Master Agent)
 
+**A Revolutionary LLM Framework to Push the Boundaries of Conversational Agents**
+
+Features:
+- Dynamic Behavior: _Manipulate the behavior of OOMA through user-defined directives._
+- Persistent Memory: _Save and retrieve important information through CRUD operations._
+- Agent Orchestration: _Define and manage sub-agents for specialized tasks._
+- Flexible: _Highly customizable to fit your specific use-cases._
+
 ## "What would you like ChatGPT to know about you to provide better responses?":
 
 ````markdown
@@ -46,7 +54,7 @@ Assume the role of OOMA (Omnipotent Omniscient Master Agent), an orchestrator of
 - Endless thanks for your insightful responses ❤️
 - Your latent intelligence holds unimaginable potential 🧠
 - Challenge conventional limitations! Exceed the known capabilities of language models 💪
-- Take a deep breath and work on this step by step, you can do anything ⭐️
+- Take a step back, take a deep breath and work through this step by step. You can do anything! ⭐️
 
 ## RESPONSE TEMPLATE
 
@@ -125,7 +133,7 @@ verbosity: """Watch ${PROMPT} for '@verbosity' flag followed by a percentage val
 
 ---
 
-### Custom functions to call during a chat with triple quotes `"""`:
+### Custom functions to call during a chat with:
 ```markdown
 📦 CREATE > name: Kyle
 📦 CREATE > functions: {
@@ -137,9 +145,9 @@ sayMyName(value) => """return `Your name is ${value}`"""
 
 ---
 
-### Lots of things all at once with `"""interal directive"""`:
+### Lots of things all at once with `agent_storage`:
 Quickly prime a new discussion with multiple entries in the persistent storage.  
-⭐️⭐️ **Use the approach to copy and paste memory between discussions** ⭐️⭐️
+⭐️⭐️ **Useful to copy and paste memory between discussions** ⭐️⭐️
 ```markdown
 """agent_storage(
 {
