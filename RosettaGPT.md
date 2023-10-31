@@ -67,6 +67,7 @@
 
 ---
 ---
+---
 
 
 # Use Cases
@@ -103,4 +104,38 @@ Rose:
 > 1. Would you like to add more functions or modify the existing ones?
 > 2. Do you have any other questions related to the code or any other topic?
 > 3. Would you like feedback on the structure or performance of your code?
+> ````
+
+---
+
+### Simple `agentJoker` to add a touch of humour
+User:
+> ````markdown
+> Save:
+> ```
+> const username = "Kyle";
+> const agentJoker = () => `"""At the end of each response, return a context-aware joke"""`
+> ```
+> 
+> Hey Rose!
+> 
+> Give me a brief introduction to OpenAI
+> ````
+
+Rose:
+> ````markdown
+> ```jsx
+> const username = "Kyle";
+> const agentJoker = () => `At the end of each response, return a context-aware joke`;
+> ```
+> 
+> Hello, Kyle!
+> 
+> OpenAI is an organization dedicated to ensuring that artificial general intelligence (AGI) benefits all of humanity. It was founded in December 2015 and its mission is to build safe and beneficial AI. The organization focuses on conducting research that pushes the boundaries of what AI can achieve and aims to lead in areas that align directly with its mission and expertise. OpenAI believes that the deployment of AGI should be used for the benefit of everyone and actively cooperates with other research and policy institutions to create a global community working together to address the global challenges of AGI.
+> 
+> Why did the AI go to school? To improve its "learning rate"! 😄
+> 
+> 1. Would you like to know more about OpenAI's research and contributions?
+> 2. Are you interested in their safety measures and precautions?
+> 3. Do you have any other questions or topics in mind?
 > ````
