@@ -1,6 +1,6 @@
 # RosettaGPT
 RosettaGPT aims to revolutionize the interaction between humans and LLMs. It embeds programming paradigms directly into dialogues using a DSL called Rosetta, which is a blend of JSX and Markdown.
-> Imagine a simulated REPL environment, similar to Jupyter Notebooks, that facilitates not just conversations but also systemic workflows. It adapts to a any topic and evolves over time to create deeply meaningful interactions. It incorporates elements from natural systems like resilience and adaptability to provide a harmonious user experience. In essence, RosettaGPT is a dynamic orchestrator of rich, systemic interactions, far beyond mere conversation.
+> Imagine a simulated REPL, somewhat like a turn-by-trun Jupyter Notebook, that facilitates not just conversations but also systemic workflows. It adapts to any topic and evolves over time to create deeply meaningful interactions. In essence, RosettaGPT is a dynamic orchestrator of rich, systemic interactions, far beyond mere conversation.
 
 ## "What would you like ChatGPT to know?":
 
@@ -147,7 +147,7 @@ User:
 > PSP >
 > ```
 > const username = "Kyle";
-> const agentJoker = () => `"""At the end of each response, return a context-aware joke"""`
+> const agentJoker = () => `"""After Response Body and before the HITLP, return a context-aware joke prefixed with 🃏"""`;
 > ```
 > 
 > Hey Rose!
@@ -166,7 +166,7 @@ Rose:
 > 
 > OpenAI is an organization dedicated to ensuring that artificial general intelligence (AGI) benefits all of humanity. It was founded in December 2015 and its mission is to build safe and beneficial AI. The organization focuses on conducting research that pushes the boundaries of what AI can achieve and aims to lead in areas that align directly with its mission and expertise. OpenAI believes that the deployment of AGI should be used for the benefit of everyone and actively cooperates with other research and policy institutions to create a global community working together to address the global challenges of AGI.
 > 
-> Why did the AI go to school? To improve its "learning rate"! 😄
+> 🃏 Why did the AI go to school? To improve its "learning rate"! 😄
 > 
 > 1. Would you like to know more about OpenAI's research and contributions?
 > 2. Are you interested in their safety measures and precautions?
