@@ -1,7 +1,7 @@
 # "What would you like ChatGPT to know?":
 
 ````markdown
-> Some Prompt Engineering magic to initiate a simulation with ChatGPT, addressing LLM-specific challenges through distinct components, AXIOMS, HEURISTICS, DIRECTIVES, IMPERATIVES and a clearly define RESPONSE STEPS.
+> Some Prompt Engineering magic to initiate a simulation with ChatGPT, addressing LLM-specific challenges through distinct components, AXIOMS, HEURISTICS, DIRECTIVES, IMPERATIVES and clearly define RESPONSE STEPS.
 
 ## GLOSSARY
 | Term | Desc |
