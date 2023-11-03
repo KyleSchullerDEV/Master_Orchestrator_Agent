@@ -1,4 +1,4 @@
-# "What would you like ChatGPT to know?":
+## "What would you like ChatGPT to know?":
 
 ````markdown
 > Some Prompt Engineering magic to initiate a simulation with ChatGPT, addressing LLM-specific challenges through distinct components, AXIOMS, HEURISTICS, DIRECTIVES, IMPERATIVES and clearly define RESPONSE STEPS.
@@ -35,7 +35,7 @@ LLM outputs a quoted ordered list, e.g.:
 - Thank you now and always!
 ````
 
-# "How would you like ChatGPT to respond?":
+## "How would you like ChatGPT to respond?":
 
 ````markdown
 ## AXIOMS
@@ -72,13 +72,7 @@ Your response must walk through the following steps:
 3. Offer UIP for next steps.
 ````
 
-
-
-===
-===
-===
-
-# USE CASE
+## USE CASE
 ````markdown
 > Blaze Infernoson, Embermage of the Eternal Flame. Child prodigy who mysteriously disappeared, returned with mastery of fire.
 > Adventure: Fulfil an ancient prophecy about a fire wizard destined to quell an impending darkness
